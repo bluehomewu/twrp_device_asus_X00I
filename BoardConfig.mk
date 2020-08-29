@@ -53,15 +53,14 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 
 # Platform
-# Fix this
-#TARGET_BOARD_PLATFORM := 
-#TARGET_BOARD_PLATFORM_GPU := 
+TARGET_BOARD_PLATFORM := msm8937
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno505
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := X00I
 
 # Partitions
-#BOARD_RECOVERYIMAGE_PARTITION_SIZE := 45056000 # This is the maximum known partition size, but it can be higher, so we just omit it
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
