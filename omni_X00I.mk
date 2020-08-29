@@ -32,6 +32,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Inherit 64bit support
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.hardware.keystore=msm8937 \
+    ro.hardware.gatekeeper=msm8937
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := X00I
 PRODUCT_NAME := omni_X00I
