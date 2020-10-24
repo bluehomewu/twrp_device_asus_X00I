@@ -5,13 +5,14 @@
 # Mount point		FS		Device									Flags
 /boot				emmc	/dev/block/bootdevice/by-name/boot
 /recovery				emmc	/dev/block/bootdevice/by-name/recovery
-/cache			ext4	/dev/block/bootdevice/by-name/cache
+/cache			ext4	/dev/block/bootdevice/by-name/oem				flags=display="Cache (oem)"
 /system			ext4	/dev/block/bootdevice/by-name/system
 /system_image		emmc	/dev/block/bootdevice/by-name/system		flags=backup=1;flashimg=1
+/vendor			squashfs	/dev/block/bootdevice/by-name/cache				flags=display="Vendor (cache)"
+/vendor_image		emmc	/dev/block/bootdevice/by-name/cache			flags=display="Vendor (cache) image";backup=1;flashimg=1
 /data				ext4	/dev/block/bootdevice/by-name/userdata		flags=encryptable=footer;length=-16384
 /persist			ext4	/dev/block/bootdevice/by-name/persist		flags=backup=1;display="Persist"
 /misc				emmc	/dev/block/bootdevice/by-name/misc
-/oem				emmc	/dev/block/bootdevice/by-name/oem
 /efs1				emmc	/dev/block/bootdevice/by-name/modemst1		flags=display="EFS";backup=1
 /efs2				emmc	/dev/block/bootdevice/by-name/modemst2		flags=backup=1;subpartitionof=/efs1
 /firmware			vfat	/dev/block/bootdevice/by-name/modem			flags=display="Firmware";fsflags=ro,nosuid,nodev,barrier=0;mounttodecrypt
