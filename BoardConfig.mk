@@ -92,3 +92,15 @@ TW_USE_TOOLBOX := true
 TW_INCLUDE_CRYPTO := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+# SHRP Variables
+SHRP_DEVICE_CODE := X00I
+SHRP_PATH := device/asus/X00I
+SHRP_MAINTAINER := Edward
+SHRP_REC_TYPE := Normal
+SHRP_DEVICE_TYPE := A_Only
+SHRP_EDL_MODE := 0
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb_otg
+SHRP_FLASH := 1
+SHRP_DARK := true
